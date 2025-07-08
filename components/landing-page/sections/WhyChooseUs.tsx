@@ -1,6 +1,4 @@
 'use client';
-
-import React from 'react';
 import { CheckCircle, Users, Wrench, Clock, Award, Shield } from 'lucide-react';
 
 export default function WhyChooseUs() {
@@ -103,32 +101,10 @@ export default function WhyChooseUs() {
               Experience the C&M difference with professional HVAC services that Massachusetts homeowners have trusted for over 30 years.
             </p>
             
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-8">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-white mb-2">5000+</div>
-                <div className="text-orange-200">Happy Customers</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-white mb-2">30+</div>
-                <div className="text-orange-200">Years Experience</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-white mb-2">24/7</div>
-                <div className="text-orange-200">Emergency Service</div>
-              </div>
-            </div>
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
-                href="tel:(978) 360-3367"
-                className="inline-flex items-center justify-center px-8 py-4 bg-white text-orange-600 font-bold rounded-xl hover:bg-orange-50 transition-colors duration-300 shadow-lg hover:shadow-xl group transform hover:scale-105"
-              >
-                <Clock className="w-5 h-5 mr-2" />
-                Call Now: (978) 360-3367
-              </a>
+            <div className="flex justify-center">
               <a 
                 href="#contact"
-                className="inline-flex items-center justify-center px-8 py-4 bg-transparent border-2 border-white text-white font-bold rounded-xl hover:bg-white/10 transition-colors duration-300"
+                className="inline-flex items-center justify-center px-8 py-4 bg-white text-orange-600 font-bold rounded-xl hover:bg-orange-50 transition-colors duration-300 shadow-lg hover:shadow-xl group transform hover:scale-105"
               >
                 <CheckCircle className="w-5 h-5 mr-2" />
                 Get Free Estimate

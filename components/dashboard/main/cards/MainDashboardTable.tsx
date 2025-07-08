@@ -23,9 +23,9 @@ import {
   getPaginationRowModel,
   getSortedRowModel,
   flexRender
-} from '@tanstack/react-table';
-import React from 'react';
-import { MdChevronLeft, MdChevronRight } from 'react-icons/md';
+  } from '@tanstack/react-table';
+  import React from 'react';
+  import { MdChevronLeft, MdChevronRight } from 'react-icons/md';
 
 type RowObj = {
   checked?: string;

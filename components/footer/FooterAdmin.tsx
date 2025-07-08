@@ -1,13 +1,11 @@
 'use client';
 
-/*eslint-disable*/
-
 export default function Footer() {
   return (
     <div className="flex w-full flex-col items-center justify-between px-1 pb-8 pt-3 xl:flex-row">
       <p className="mb-4 text-center text-sm font-medium text-zinc-500 dark:text-zinc-400 sm:!mb-0 md:text-lg">
         <span className="mb-4 text-center text-sm text-zinc-500 dark:text-zinc-400 sm:!mb-0 md:text-sm">
-          ©{new Date().getFullYear()} Horizon AI Boilerplate. All Rights
+          ©{new Date().getFullYear()} HVAC Dashboard. All Rights
           Reserved.
         </span>
       </p>
@@ -16,16 +14,16 @@ export default function Footer() {
           <li>
             <a
               target="blank"
-              href="mailto:hello@simmmple.com"
+              href="mailto:support@example.com"
               className="text-sm font-medium text-zinc-500 hover:text-zinc-950 dark:text-zinc-400"
             >
-              FAQs
+              Support
             </a>
           </li>
           <li>
             <a
               target="blank"
-              href="https://horizon-ui.com/"
+              href="/privacy"
               className="text-sm font-medium text-zinc-500 hover:text-zinc-950 dark:text-zinc-400"
             >
               Privacy Policy
@@ -34,19 +32,10 @@ export default function Footer() {
           <li>
             <a
               target="blank"
-              href="https://horizon-ui.com/boilerplate"
+              href="/terms"
               className="text-sm font-medium text-zinc-500 hover:text-zinc-950 dark:text-zinc-400"
             >
               Terms & Conditions
-            </a>
-          </li>
-          <li>
-            <a
-              target="blank"
-              href="https://blog.horizon-ui.com/"
-              className="text-sm font-medium text-zinc-500 hover:text-zinc-950 dark:text-zinc-400"
-            >
-              Refund Policy
             </a>
           </li>
         </ul>

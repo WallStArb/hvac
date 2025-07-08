@@ -5,14 +5,13 @@ export const stripe = new Stripe(
   {
     // https://github.com/stripe/stripe-node#configuration
     // https://stripe.com/docs/api/versioning
-    // @ts-ignore
-    apiVersion: null,
+    apiVersion: '2024-04-10',
     // Register this as an official Stripe plugin.
     // https://stripe.com/docs/building-plugins#setappinfo
     appInfo: {
-      name: 'Horizon AI Boilerplate',
+      name: 'HVAC Dashboard',
       version: '1.1.0',
-      url: 'https://github.com/horizon-ui/shadcn-nextjs-boilerplate'
+      url: 'https://your-hvac-dashboard.com'
     }
   }
 );

@@ -1,4 +1,3 @@
-/*eslint-disable*/
 'use client';
 
 import DashboardLayout from '@/components/layout';
@@ -25,8 +24,7 @@ export default function Settings(props: Props) {
     status: boolean;
     message: string;
   }>();
-  console.log(props.user);
-  console.log(props.userDetails);
+
   const router = useRouter();
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -74,7 +72,7 @@ export default function Settings(props: Props) {
       .update({ full_name: fullName })
       .eq('id', props.user?.id);
     if (error) {
-      console.log(error);
+
     }
     e.preventDefault();
     supabase.auth.updateUser({

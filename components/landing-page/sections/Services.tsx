@@ -1,6 +1,4 @@
 'use client';
-
-import React from 'react';
 import { Snowflake, Flame, Wind, Wrench, Zap, ThermometerSun, Shield, Clock, Star } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -137,14 +135,11 @@ export default function Services() {
                     </ul>
                   </div>
 
-                  <Button 
-                    className={`w-full bg-gradient-to-r ${service.color} hover:opacity-90 text-white shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 group border-0`}
-                    asChild
-                  >
-                    <a href="tel:(978) 360-3367">
-                      Get Quote Now
-                    </a>
-                  </Button>
+                  <div className="text-center">
+                    <div className="text-gray-600 text-sm">
+                      Call <a href="tel:(978) 360-3367" className="text-blue-600 hover:underline font-semibold">(978) 360-3367</a> for pricing
+                    </div>
+                  </div>
                 </CardContent>
               </Card>
             );
@@ -312,37 +307,10 @@ export default function Services() {
             </Card>
           </div>
 
-          {/* Membership CTA */}
-          <div className="mt-12 bg-gradient-to-r from-gray-50 to-blue-50 rounded-2xl p-8 border border-gray-200">
-            <h4 className="text-2xl font-bold text-gray-900 mb-4">Why Choose a C&M Membership?</h4>
-            <div className="grid md:grid-cols-3 gap-6 text-center">
-              <div>
-                <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <Shield className="w-6 h-6 text-blue-600" />
-                </div>
-                <h5 className="font-semibold text-gray-900 mb-2">Peace of Mind</h5>
-                <p className="text-gray-600 text-sm">Regular maintenance prevents 85% of HVAC breakdowns</p>
-              </div>
-              <div>
-                <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <Clock className="w-6 h-6 text-green-600" />
-                </div>
-                <h5 className="font-semibold text-gray-900 mb-2">Priority Service</h5>
-                <p className="text-gray-600 text-sm">Members get faster response times when you need us most</p>
-              </div>
-              <div>
-                <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <Star className="w-6 h-6 text-orange-600" />
-                </div>
-                <h5 className="font-semibold text-gray-900 mb-2">Save Money</h5>
-                <p className="text-gray-600 text-sm">Members save an average of $300+ per year on services</p>
-              </div>
-            </div>
-            <div className="mt-6">
-              <p className="text-gray-700 text-center">
-                <strong>Ready to join?</strong> Call us at <a href="tel:(978) 360-3367" className="text-blue-600 hover:underline font-semibold">(978) 360-3367</a> or schedule online to get started today!
-              </p>
-            </div>
+          <div className="mt-12 text-center">
+            <p className="text-gray-700">
+              <strong>Ready to join a membership plan?</strong> Contact us to get started today!
+            </p>
           </div>
         </div>
 
@@ -385,25 +353,14 @@ export default function Services() {
                 Don't wait for your HVAC system to fail. Contact C&M Heating & Cooling for fast, professional service with transparent pricing.
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex justify-center">
                 <Button 
                   size="lg" 
                   className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 px-8 py-6 text-lg"
                   asChild
                 >
-                  <a href="tel:(978) 360-3367">
-                    Call Now: (978) 360-3367
-                  </a>
-                </Button>
-                
-                <Button 
-                  size="lg" 
-                  variant="outline" 
-                  className="border-2 border-white/30 text-white bg-white/10 backdrop-blur-sm hover:bg-white/20 hover:border-white/50 shadow-xl px-8 py-6 text-lg"
-                  asChild
-                >
                   <a href="#contact">
-                    Schedule Service Online
+                    Get Free Estimate
                   </a>
                 </Button>
               </div>

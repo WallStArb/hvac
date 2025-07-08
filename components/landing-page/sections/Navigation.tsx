@@ -23,6 +23,7 @@ export default function Navigation() {
     { href: '#about', label: 'About' },
     { href: '#testimonials', label: 'Testimonials' },
     { href: '#contact', label: 'Contact' },
+    { href: '/dashboard/signin', label: 'Customer Portal' },
   ];
 
   return (

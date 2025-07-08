@@ -1,6 +1,5 @@
 'use client';
 
-import React from 'react';
 import Link from 'next/link';
 import { Phone, Star, Shield, Clock, ArrowRight, Flame } from 'lucide-react';
 import { Button } from '@/components/ui/button';

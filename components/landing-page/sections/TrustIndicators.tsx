@@ -1,6 +1,4 @@
 'use client';
-
-import React from 'react';
 import { Shield, Award, Clock, Star, CheckCircle, ThumbsUp } from 'lucide-react';
 
 export default function TrustIndicators() {

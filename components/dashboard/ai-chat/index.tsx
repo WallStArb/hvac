@@ -1,5 +1,4 @@
 'use client';
-/*eslint-disable*/
 
 import MessageBoxChat from '@/components/MessageBoxChat';
 import DashboardLayout from '@/components/layout';

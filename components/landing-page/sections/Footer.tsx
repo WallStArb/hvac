@@ -1,6 +1,4 @@
 'use client';
-
-import React from 'react';
 import Link from 'next/link';
 import { Phone, Mail, MapPin, Clock, Star, Shield, Award, CheckCircle } from 'lucide-react';
 import Logo from '@/components/logo';
@@ -174,26 +172,26 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Emergency Section */}
+        {/* Contact Section */}
         <div className="border-t border-white/20 py-8">
-          <div className="bg-gradient-to-r from-red-600/20 to-orange-600/20 backdrop-blur-sm rounded-2xl p-8 text-center">
-            <h3 className="text-2xl font-bold text-white mb-4">HVAC Emergency?</h3>
+          <div className="bg-gradient-to-r from-blue-600/20 to-orange-600/20 backdrop-blur-sm rounded-2xl p-8 text-center">
+            <h3 className="text-2xl font-bold text-white mb-4">Ready to Schedule Service?</h3>
             <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
-              Don't suffer in discomfort! Our emergency team is standing by 24/7 to restore your home's comfort quickly and professionally.
+              Contact us today for professional HVAC service. Our experienced team is ready to help with all your heating and cooling needs.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
                 href="tel:(978) 360-3367"
-                className="inline-flex items-center justify-center px-8 py-4 bg-red-500 hover:bg-red-600 text-white font-bold rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+                className="inline-flex items-center justify-center px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
               >
                 <Phone className="w-5 h-5 mr-2" />
-                Emergency: (978) 360-3367
+                Call: (978) 360-3367
               </a>
               <a 
                 href="#contact"
                 className="inline-flex items-center justify-center px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-bold rounded-xl border border-white/30 transition-all duration-300"
               >
-                Schedule Service
+                Contact Form
               </a>
             </div>
           </div>

@@ -1,6 +1,4 @@
 'use client';
-
-/* eslint-disable */
 import NavLink from '@/components/link/NavLink';
 import { IRoute } from '@/types/types';
 import { usePathname } from 'next/navigation';

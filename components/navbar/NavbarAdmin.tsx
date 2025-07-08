@@ -1,6 +1,4 @@
 'use client';
-
-/* eslint-disable */
 import AdminNavbarLinks from './NavbarLinksAdmin';
 import NavLink from '@/components/link/NavLink';
 

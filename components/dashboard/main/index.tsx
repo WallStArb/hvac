@@ -1,4 +1,3 @@
-/*eslint-disable*/
 'use client';
 
 import MainChart from '@/components/dashboard/main/cards/MainChart';

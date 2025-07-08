@@ -4,7 +4,7 @@ import {
   upsertProductRecord,
   upsertPriceRecord,
   manageSubscriptionStatusChange
-} from '@/utils/supabase-admin';
+} from '@/utils/supabase/admin';
 import { headers } from 'next/headers';
 
 const relevantEvents = new Set([
@@ -28,7 +28,7 @@ export async function POST(req: Request) {
     if (!sig || !webhookSecret) return;
     event = stripe.webhooks.constructEvent(body, sig, webhookSecret);
   } catch (err) {
-    console.log(`❌ Error message: ${err.message}`);
+
     return new Response(`Webhook Error: ${err.message}`, { status: 400 });
   }
 
@@ -68,7 +68,7 @@ export async function POST(req: Request) {
           throw new Error('Unhandled relevant event!');
       }
     } catch (error) {
-      console.log(error);
+  
       return new Response(
         'Webhook handler failed. View your nextjs function logs.',
         {

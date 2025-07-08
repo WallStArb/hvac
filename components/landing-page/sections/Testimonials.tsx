@@ -1,6 +1,4 @@
 'use client';
-
-import React from 'react';
 import { Star, Quote, MapPin, Calendar } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Avatar } from '@/components/ui/avatar';

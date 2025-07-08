@@ -5,9 +5,9 @@ import {
   DropdownMenuGroup,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from '@/components/ui/dropdown-menu';
-import React from 'react';
-import { AiOutlineUser } from 'react-icons/ai';
+  } from '@/components/ui/dropdown-menu';
+  import React from 'react';
+  import { AiOutlineUser } from 'react-icons/ai';
 import { AiOutlineShop } from 'react-icons/ai';
 import { BsThreeDots } from 'react-icons/bs';
 import { FiSettings } from 'react-icons/fi';

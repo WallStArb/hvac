@@ -1,4 +1,4 @@
-import React from 'react';
+
 
 export default function InnerContent(props) {
   const { children, extra, ...rest } = props;
