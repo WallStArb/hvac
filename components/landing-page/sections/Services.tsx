@@ -45,18 +45,18 @@ export default function Services() {
     },
     {
       icon: Star,
-      title: "Annual Maintenance Combo (AC + Furnace, One Call)",
-      description: "$129 for AC or furnace, $179 for both in a single visit. Each additional system 40% off (e.g., 2 systems: $129 + $77 = $206, combo + 1: $179 + $107 = $286). Includes comprehensive inspection, standard air filter replacement, minor tune-ups, priority scheduling, and exclusive discounts. Best for comprehensive care and peace of mind. Regular maintenance improves efficiency, lowers utility bills, and extends system lifespan (per industry standards).",
-      price: "$129 (AC or Furnace) | $179 (AC + Furnace) | 40% off each additional",
+      title: "Annual Maintenance (AC and/or Furnace, One Call)",
+      description: "Choose AC, furnace, or both in a single visit. $129 for AC or furnace, $179 for both. Each additional system 40% off (e.g., 2 systems: $129 + $77 = $206, both + 1: $179 + $107 = $286). Transparent, no contracts, and industry-backed care.",
+      price: "$129 (AC or Furnace) | $179 (Both) | 40% off each additional",
       features: [
-        "Full inspection for AC, furnace, or both in one call",
-        "Standard air filters included",
-        "Minor tune-ups for all serviced systems",
+        "Comprehensive inspection of all selected systems",
+        "Standard air filter replacement",
+        "Minor tune-ups (tightening, clearing lines, etc.)",
         "Priority scheduling",
         "Exclusive member discounts",
         "40% discount for each additional system (e.g., 3 systems: $179 + $107 = $286)",
-        "Improves efficiency & air quality",
-        "Reduces risk of emergency repairs"
+        "No contracts, no hidden fees",
+        "Backed by industry standards for efficiency, comfort, and peace of mind"
       ],
       color: "from-blue-500 to-purple-600",
       highlight: "Best Value Combo"
@@ -141,6 +141,25 @@ export default function Services() {
                       {service.price}
                     </div>
                     {/* Only use accordion for the combo card */}
+                    {service.title === 'Annual Maintenance (AC and/or Furnace, One Call)' && (
+                      <div className="flex justify-center gap-4 mb-4">
+                        <div className="flex flex-col items-center">
+                          <Snowflake className="w-6 h-6 text-blue-500 mb-1" />
+                          <span className="text-sm font-semibold">AC Only</span>
+                          <span className="text-base">$129</span>
+                        </div>
+                        <div className="flex flex-col items-center">
+                          <Flame className="w-6 h-6 text-orange-500 mb-1" />
+                          <span className="text-sm font-semibold">Furnace Only</span>
+                          <span className="text-base">$129</span>
+                        </div>
+                        <div className="flex flex-col items-center">
+                          <Star className="w-6 h-6 text-purple-500 mb-1" />
+                          <span className="text-sm font-semibold">Both</span>
+                          <span className="text-base">$179</span>
+                        </div>
+                      </div>
+                    )}
                     {service.title === 'Annual Maintenance Combo (AC + Furnace, One Call)' ? (
                       <Accordion type="single" collapsible>
                         <AccordionItem value="details">
@@ -175,6 +194,22 @@ export default function Services() {
                     </div>
                   </div>
                 </CardContent>
+                {service.title === 'Annual Maintenance (AC and/or Furnace, One Call)' && (
+                  <Accordion type="single" collapsible className="mt-2">
+                    <AccordionItem value="faq">
+                      <AccordionTrigger>FAQ</AccordionTrigger>
+                      <AccordionContent>
+                        <ul className="space-y-2 text-gray-700">
+                          <li><strong>What counts as a system?</strong> <br />Each AC unit or furnace is considered a separate system.</li>
+                          <li><strong>What’s included in the service?</strong> <br />Comprehensive inspection, standard air filter replacement, minor tune-ups, and a detailed report.</li>
+                          <li><strong>How does the discount work?</strong> <br />After the first system, each additional system in the same visit is 40% off the base price.</li>
+                          <li><strong>Can I book just AC or just furnace?</strong> <br />Yes! You can choose either, or both for the best value.</li>
+                          <li><strong>Are there any contracts or hidden fees?</strong> <br />No contracts, no hidden fees—just honest, transparent pricing.</li>
+                        </ul>
+                      </AccordionContent>
+                    </AccordionItem>
+                  </Accordion>
+                )}
               </Card>
             );
           })}
