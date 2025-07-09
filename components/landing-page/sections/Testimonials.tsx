@@ -79,7 +79,7 @@ export default function Testimonials() {
             </span>
           </h2>
           <p className="text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
-            Don't just take our word for it. Read what Massachusetts homeowners say about their experience with C&M Heating & Cooling.
+            Don&apos;t just take our word for it. Read what Massachusetts homeowners say about their experience with C&M Heating & Cooling.
           </p>
         </div>
 

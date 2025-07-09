@@ -17,19 +17,25 @@ interface ForgotPasswordProps {
 
 export default function ForgotPassword({
   allowEmail,
-  redirectMethod
+  redirectMethod,
+  disableButton
 }: ForgotPasswordProps) {
-  const router = redirectMethod === 'client' ? useRouter() : null;
+  const router = useRouter(); // Always call the hook
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     setIsSubmitting(true); // Disable the button while the request is being handled
-    await handleRequest(e, requestPasswordUpdate, router);
+    // Only use router if redirectMethod is 'client'
+    const routerToUse = redirectMethod === 'client' ? router : null;
+    await handleRequest(e, requestPasswordUpdate, routerToUse);
     setIsSubmitting(false);
   };
 
   return (
-    <div className="mb-8">
+    <div className="mb-6">
+      <p className="mb-4 text-foreground">
+        Enter your email address and we&apos;ll send you a link to reset your password.
+      </p>
       <form
         noValidate={true}
         className="mb-4"

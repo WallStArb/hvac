@@ -238,7 +238,7 @@ export default function Contact() {
                 <Clock className="w-12 h-12 mx-auto mb-4 text-yellow-200" />
                 <h3 className="text-xl font-bold mb-2">HVAC Emergency?</h3>
                 <p className="text-red-100 mb-4 text-sm">
-                  Don't wait! Our emergency team is available 24/7
+                  Don&apos;t wait! Our emergency team is available 24/7
                 </p>
                 <Button 
                   size="lg"

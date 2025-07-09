@@ -45,7 +45,7 @@ export default function CTA() {
         <div className="text-center mb-16 animate-fade-up">
           <div className="inline-flex items-center justify-center px-6 py-3 bg-white/20 backdrop-blur-sm rounded-full text-white font-semibold mb-6">
             <Zap className="w-5 h-5 mr-2" />
-            Don't Wait - Act Now!
+            Don&apos;t Wait - Act Now!
           </div>
 
           <h2 className="text-4xl lg:text-6xl font-bold text-white mb-6">
@@ -56,8 +56,8 @@ export default function CTA() {
           </h2>
           
           <p className="text-xl text-orange-100 max-w-3xl mx-auto leading-relaxed mb-8">
-            When your heating or cooling system fails, every minute counts. Don't suffer in discomfort – 
-            Giovanni and the C&M team are standing by to restore your home's comfort quickly and professionally.
+            When your heating or cooling system fails, every minute counts. Don&apos;t suffer in discomfort – 
+            Giovanni and the C&M team are standing by to restore your home&apos;s comfort quickly and professionally.
           </p>
 
           <div className="bg-white/20 backdrop-blur-md rounded-2xl p-6 max-w-2xl mx-auto mb-12">
@@ -93,7 +93,7 @@ export default function CTA() {
               
               <h3 className="text-2xl font-bold text-white mb-4">Emergency HVAC Service</h3>
               <p className="text-orange-100 mb-6 leading-relaxed">
-                System breakdown? Don't wait! Our emergency team is available 24/7 
+                System breakdown? Don&apos;t wait! Our emergency team is available 24/7 
                 to get your heating or cooling back up and running.
               </p>
 

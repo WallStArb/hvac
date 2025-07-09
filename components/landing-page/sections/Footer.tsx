@@ -51,7 +51,7 @@ export default function Footer() {
               </div>
 
               <p className="text-blue-100 leading-relaxed mb-6">
-                Your trusted HVAC partner for over 30 years. We're committed to keeping Massachusetts families comfortable with professional heating and cooling solutions.
+                Your trusted HVAC partner for over 30 years. We&apos;re committed to keeping Massachusetts families comfortable with professional heating and cooling solutions.
               </p>
 
               <div className="space-y-3">

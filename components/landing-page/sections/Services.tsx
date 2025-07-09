@@ -350,7 +350,7 @@ export default function Services() {
                 Need HVAC Service Today?
               </h3>
               <p className="text-blue-100 text-lg mb-8 max-w-2xl mx-auto">
-                Don't wait for your HVAC system to fail. Contact C&M Heating & Cooling for fast, professional service with transparent pricing.
+                Don&apos;t wait for your HVAC system to fail. Contact C&M Heating & Cooling for fast, professional service with transparent pricing.
               </p>
               
               <div className="flex justify-center">

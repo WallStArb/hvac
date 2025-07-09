@@ -19,12 +19,14 @@ export default function EmailSignIn({
   allowPassword,
   redirectMethod
 }: EmailSignInProps) {
-  const router = redirectMethod === 'client' ? useRouter() : null;
+  const router = useRouter(); // Always call the hook
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     setIsSubmitting(true); // Disable the button while the request is being handled
-    await handleRequest(e, signInWithEmail, router);
+    // Only use router if redirectMethod is 'client'
+    const routerToUse = redirectMethod === 'client' ? router : null;
+    await handleRequest(e, signInWithEmail, routerToUse);
     setIsSubmitting(false);
   };
 
