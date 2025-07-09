@@ -43,32 +43,14 @@ export default function Services() {
       highlight: "24/7 Available"
     },
     {
-      icon: Wrench,
-      title: "Annual Maintenance (AC or Furnace)",
-      description: "$129 per system (AC or furnace), one-time service. Each additional system 40% off (e.g., 2 units: $129 + $77 = $206). Includes comprehensive inspection, standard air filter replacement, and minor tune-ups. Perfect for new or occasional customers. Regular maintenance improves efficiency, lowers utility bills, and extends system lifespan (per industry standards).",
-      price: "$129 (1st) + $77 (2nd)",
-      features: [
-        "Full system inspection (AC or furnace)",
-        "Standard air filter included",
-        "Minor tune-ups (tightening, clearing lines)",
-        "No contract required",
-        "One-time service, not a yearly plan",
-        "40% discount for each additional system (e.g., 2 units: $206)",
-        "Improves efficiency & air quality",
-        "Reduces risk of emergency repairs"
-      ],
-      color: "from-green-500 to-blue-600",
-      highlight: "One-Time Service"
-    },
-    {
       icon: Star,
       title: "Annual Maintenance Combo (AC + Furnace, One Call)",
-      description: "$179 for both AC and furnace serviced in a single visit. Each additional system 40% off. Includes all single-system maintenance features for both units, plus priority scheduling and exclusive discounts. Best for comprehensive care and peace of mind. Combo service helps prevent costly breakdowns, increase comfort, and maximize system lifespan (per industry standards).",
-      price: "$179 (AC + Furnace) | $107 each additional system",
+      description: "$129 for AC or furnace, $179 for both in a single visit. Each additional system 40% off (e.g., 2 systems: $129 + $77 = $206, combo + 1: $179 + $107 = $286). Includes comprehensive inspection, standard air filter replacement, minor tune-ups, priority scheduling, and exclusive discounts. Best for comprehensive care and peace of mind. Regular maintenance improves efficiency, lowers utility bills, and extends system lifespan (per industry standards).",
+      price: "$129 (AC or Furnace) | $179 (AC + Furnace) | 40% off each additional",
       features: [
-        "Full inspection for both AC and furnace in one call",
+        "Full inspection for AC, furnace, or both in one call",
         "Standard air filters included",
-        "Minor tune-ups for both systems",
+        "Minor tune-ups for all serviced systems",
         "Priority scheduling",
         "Exclusive member discounts",
         "40% discount for each additional system (e.g., 3 systems: $179 + $107 = $286)",
