@@ -21,23 +21,30 @@ A modern, AI-powered HVAC management platform built with Next.js, Supabase, and 
 ## 🛠 Tech Stack
 
 ### Frontend
-- **Next.js 15.1** - React framework with App Router
-- **React 19** - Latest React features and concurrent rendering
-- **TypeScript** - Type-safe development
-- **Tailwind CSS** - Utility-first styling
-- **shadcn/ui** - Modern component library
-- **Framer Motion** - Smooth animations and transitions
+- **Next.js 15.1.6** - React framework with App Router
+- **React 19.0.0-rc.1** - Latest React features and concurrent rendering
+- **TypeScript 5.8.3** - Type-safe development
+- **Tailwind CSS 3.4.17** - Utility-first styling
+- **shadcn/ui 0.9.5** - Modern component library
+- **Framer Motion 12.23.0** - Smooth animations and transitions
+- **Radix UI** - Accessible component primitives
+- **Lucide React 0.525.0** - Beautiful icons
 
 ### Backend & Database
-- **Supabase** - PostgreSQL database with real-time subscriptions
+- **Supabase 2.30.4** - PostgreSQL database with real-time subscriptions
 - **Supabase Auth** - Authentication and user management
-- **Stripe** - Payment processing
-- **OpenAI API** - AI chat functionality
+- **Stripe 18.3.0** - Payment processing with latest API
+- **OpenAI API 5.8.3** - AI chat functionality
+
+### Charts & Data Visualization
+- **ApexCharts 4.7.0** - Interactive charts and analytics
+- **Recharts 3.1.0** - Composable charting library
+- **React ApexCharts 1.7.0** - React wrapper for ApexCharts
 
 ### Development Tools
-- **ESLint** - Code linting and formatting
-- **Prettier** - Code formatting
-- **Husky** - Git hooks for code quality
+- **ESLint 9.3.0** - Code linting and formatting
+- **Prettier 3.2.5** - Code formatting
+- **TypeScript 5.8.3** - Type checking and IntelliSense
 
 ## 📋 Prerequisites
 
@@ -121,7 +128,8 @@ hvac/
 ├── utils/                # Helper utilities
 │   ├── auth-helpers/     # Authentication utilities
 │   ├── supabase/         # Supabase client setup
-│   └── stripe/           # Stripe integration
+│   ├── stripe/           # Stripe integration
+│   └── streams/          # Real-time data streaming
 ├── styles/               # Global styles
 └── public/               # Static assets
 ```
@@ -139,10 +147,14 @@ hvac/
 - `npm run supabase:stop` - Stop local Supabase
 - `npm run supabase:reset` - Reset database
 - `npm run supabase:generate-types` - Generate TypeScript types
+- `npm run supabase:link` - Link to remote project
+- `npm run supabase:push` - Push migrations
+- `npm run supabase:pull` - Pull latest schema
 
 ### Stripe
 - `npm run stripe:listen` - Listen for webhooks
 - `npm run stripe:fixtures` - Load test data
+- `npm run stripe:login` - Login to Stripe CLI
 
 ## 🚀 Deployment
 
@@ -196,6 +208,26 @@ This Next.js application can be deployed to any platform that supports Node.js:
 - Service billing
 - Payment history
 - Invoice generation
+
+## 🔄 Recent Updates
+
+### Latest Package Updates (v3.0.0)
+- ✅ **React 19** - Latest React features and concurrent rendering
+- ✅ **Next.js 15.1.6** - Latest App Router features
+- ✅ **TypeScript 5.8.3** - Enhanced type safety
+- ✅ **Stripe 18.3.0** - Latest payment processing features
+- ✅ **OpenAI 5.8.3** - Latest AI capabilities
+- ✅ **Supabase 2.30.4** - Latest database features
+- ✅ **ApexCharts 4.7.0** - Enhanced charting capabilities
+- ✅ **Framer Motion 12.23.0** - Improved animations
+- ✅ **All UI components** - Updated to latest versions
+
+### Compatibility Fixes
+- ✅ Fixed TypeScript compilation issues
+- ✅ Updated ReactMarkdown component usage
+- ✅ Fixed JSX.Element type definitions
+- ✅ Updated Stripe API version compatibility
+- ✅ Enhanced Supabase SSR integration
 
 ## 🤝 Contributing
 
