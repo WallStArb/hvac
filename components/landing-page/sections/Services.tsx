@@ -44,16 +44,16 @@ export default function Services() {
     },
     {
       icon: Wrench,
-      title: "One-Time Annual Maintenance (AC or Furnace)",
-      description: "$129 per system (AC or furnace), one-time service. Each additional system 40% off (e.g., 2 units: $129 + $77 = $206). Includes comprehensive inspection, standard air filter replacement, and minor tune-ups. Perfect for new or occasional customers. Regular maintenance improves efficiency, lowers utility bills, and extends system lifespan (per industry standards).",
-      price: "$129 (1st) + $77 (2nd)",
+      title: "Annual Maintenance (AC or Furnace)",
+      description: "$129 per system (AC or furnace), one-time service. Each additional system 60% off (e.g., 2 units: $129 + $52 = $181). Includes comprehensive inspection, standard air filter replacement, and minor tune-ups. Perfect for new or occasional customers. Regular maintenance improves efficiency, lowers utility bills, and extends system lifespan (per industry standards).",
+      price: "$129 (1st) + $52 (2nd)",
       features: [
         "Full system inspection (AC or furnace)",
         "Standard air filter included",
         "Minor tune-ups (tightening, clearing lines)",
         "No contract required",
         "One-time service, not a yearly plan",
-        "40% discount for each additional system (e.g., 2 units: $206)",
+        "60% discount for each additional system (e.g., 2 units: $181)",
         "Improves efficiency & air quality",
         "Reduces risk of emergency repairs"
       ],
@@ -62,21 +62,21 @@ export default function Services() {
     },
     {
       icon: Star,
-      title: "Membership Annual Maintenance (AC + Furnace Combo, Yearly)",
-      description: "$179 per year for both AC + furnace. Each additional system 40% off. Includes all one-time maintenance features plus yearly reminders, priority scheduling, and exclusive member discounts. Best for ongoing care and peace of mind. Yearly plans help prevent costly breakdowns, increase comfort, and maximize system lifespan (per industry standards).",
-      price: "$179/year (AC + Furnace) | 40% off each additional",
+      title: "Annual Maintenance Combo (AC + Furnace, One Call)",
+      description: "$179 for both AC and furnace serviced in a single visit. Each additional system 60% off. Includes all single-system maintenance features for both units, plus priority scheduling and exclusive discounts. Best for comprehensive care and peace of mind. Combo service helps prevent costly breakdowns, increase comfort, and maximize system lifespan (per industry standards).",
+      price: "$179 (AC + Furnace) | $72 each additional system",
       features: [
-        "Everything in One-Time Maintenance",
-        "Covers both AC and furnace",
-        "Yearly maintenance reminder",
+        "Full inspection for both AC and furnace in one call",
+        "Standard air filters included",
+        "Minor tune-ups for both systems",
         "Priority scheduling",
         "Exclusive member discounts",
-        "40% discount for each additional system",
-        "Lowers utility bills & extends system life",
-        "Builds long-term trust & comfort"
+        "60% discount for each additional system (e.g., 3 systems: $179 + $72 = $251)",
+        "Improves efficiency & air quality",
+        "Reduces risk of emergency repairs"
       ],
       color: "from-blue-500 to-purple-600",
-      highlight: "Best Value (Yearly)"
+      highlight: "Best Value Combo"
     },
     {
       icon: Star,
