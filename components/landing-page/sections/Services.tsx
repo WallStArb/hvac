@@ -44,32 +44,39 @@ export default function Services() {
     },
     {
       icon: Wrench,
-      title: "One-Time Annual Maintenance",
-      description: "Flat Rate: $129 per system. Includes a comprehensive inspection, standard air filter replacement, and minor tune-ups. Perfect for new or occasional customers.",
-      price: "$129 / system",
+      title: "One-Time Annual Maintenance (AC or Furnace)",
+      description: "$129 per system (AC or furnace), one-time service. Each additional system 40% off (e.g., 2 units: $129 + $77 = $206). Includes comprehensive inspection, standard air filter replacement, and minor tune-ups. Perfect for new or occasional customers. Regular maintenance improves efficiency, lowers utility bills, and extends system lifespan (per industry standards).",
+      price: "$129 (1st) + $77 (2nd)",
       features: [
-        "Full system inspection (thermostat, coils, refrigerant, electrical, ductwork)",
+        "Full system inspection (AC or furnace)",
         "Standard air filter included",
         "Minor tune-ups (tightening, clearing lines)",
-        "No contract required"
+        "No contract required",
+        "One-time service, not a yearly plan",
+        "40% discount for each additional system (e.g., 2 units: $206)",
+        "Improves efficiency & air quality",
+        "Reduces risk of emergency repairs"
       ],
       color: "from-green-500 to-blue-600",
       highlight: "One-Time Service"
     },
     {
       icon: Star,
-      title: "Membership Annual Maintenance",
-      description: "$159 per system per year. Includes all one-time maintenance features plus yearly reminders, priority scheduling, and exclusive member discounts. Best for ongoing care and peace of mind.",
-      price: "$159 / system / year",
+      title: "Membership Annual Maintenance (AC + Furnace Combo, Yearly)",
+      description: "$179 per year for both AC + furnace. Each additional system 40% off. Includes all one-time maintenance features plus yearly reminders, priority scheduling, and exclusive member discounts. Best for ongoing care and peace of mind. Yearly plans help prevent costly breakdowns, increase comfort, and maximize system lifespan (per industry standards).",
+      price: "$179/year (AC + Furnace) | 40% off each additional",
       features: [
         "Everything in One-Time Maintenance",
+        "Covers both AC and furnace",
         "Yearly maintenance reminder",
         "Priority scheduling",
         "Exclusive member discounts",
-        "Relationship-first approach"
+        "40% discount for each additional system",
+        "Lowers utility bills & extends system life",
+        "Builds long-term trust & comfort"
       ],
       color: "from-blue-500 to-purple-600",
-      highlight: "Best Value"
+      highlight: "Best Value (Yearly)"
     },
     {
       icon: Star,
@@ -262,7 +269,7 @@ export default function Services() {
             <Card className="relative bg-white border-2 border-orange-200 shadow-elegant hover:shadow-elegant-lg transition-all duration-300 hover-lift">
               <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                 <Badge className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-4 py-1 text-sm font-semibold">
-                  Best Value
+                  Best Value (Yearly)
                 </Badge>
               </div>
               
@@ -331,6 +338,18 @@ export default function Services() {
                 </Button>
               </CardContent>
             </Card>
+          </div>
+
+          {/* Industry-backed Benefits Info Box */}
+          <div className="max-w-2xl mx-auto mt-8 mb-16 p-6 bg-blue-50 border-l-4 border-blue-400 rounded shadow animate-fade-up">
+            <h4 className="text-lg font-semibold mb-2 text-blue-900">Why Regular Maintenance?</h4>
+            <ul className="list-disc pl-5 text-blue-800 text-base space-y-1">
+              <li>Improves system efficiency and lowers utility bills</li>
+              <li>Extends the lifespan of your HVAC equipment</li>
+              <li>Reduces risk of emergency repairs and costly breakdowns</li>
+              <li>Enhances home comfort and air quality</li>
+              <li>Backed by industry standards (<a href="https://fieldedge.com/blog/hvac-yearly-maintenance-cost-a-guide-for-businesses/" className="underline text-blue-700" target="_blank">FieldEdge Guide</a>)</li>
+            </ul>
           </div>
 
           <div className="mt-12 text-center">
