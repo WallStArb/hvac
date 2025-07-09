@@ -96,7 +96,7 @@ export default function EmailSignIn({
               href="/dashboard/signin/signup"
               className="font-medium text-sm dark:text-white"
             >
-              Don't have an account? Sign up
+              Don&apos;t have an account? Sign up
             </Link>
           </p>
         </>

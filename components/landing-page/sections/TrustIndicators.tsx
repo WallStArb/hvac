@@ -57,7 +57,7 @@ export default function TrustIndicators() {
               <span className="block gradient-text mt-2">Trust C&M Heating & Cooling</span>
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              When you choose C&M, you're choosing a partner committed to your comfort, safety, and satisfaction.
+              When you choose C&M, you&apos;re choosing a partner committed to your comfort, safety, and satisfaction.
             </p>
           </div>
 

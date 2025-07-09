@@ -49,7 +49,7 @@ export default function CTA() {
           </div>
 
           <h2 className="text-4xl lg:text-6xl font-bold text-white mb-6">
-            Your Comfort Can't Wait
+            Your Comfort Can&apos;t Wait
             <span className="block text-yellow-200 mt-2">
               Get Professional HVAC Service Today
             </span>

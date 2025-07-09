@@ -9,14 +9,15 @@ import {
   AccordionTrigger
 } from '@/components/ui/accordion';
 import { Button } from '@/components/ui/button';
-import Bgdark from '@/public/img/dark/ai-chat/bg-image.png';
-import Bg from '@/public/img/light/ai-chat/bg-image.png';
+import { Input } from '@/components/ui/input';
+import { useTheme } from 'next-themes';
+import Image from 'next/image';
+import { useState } from 'react';
+import { HiMiniPencilSquare, HiSparkles, HiUser } from 'react-icons/hi2';
 import { ChatBody, OpenAIModel } from '@/types/types';
 import { User } from '@supabase/supabase-js';
-import { useTheme } from 'next-themes';
-import { useState } from 'react';
-import { HiUser, HiSparkles, HiMiniPencilSquare } from 'react-icons/hi2';
-import { Input } from '@/components/ui/input';
+import Bg from '@/public/img/light/ai-chat/bg-image.png';
+import Bgdark from '@/public/img/dark/ai-chat/bg-image.png';
 
 interface Props {
   user: User | null | undefined;
@@ -24,7 +25,6 @@ interface Props {
 }
 export default function Chat(props: Props) {
   const { theme, setTheme } = useTheme();
-  // *** If you use .env.local variable for your API key, method which we recommend, use the apiKey variable commented below
   // Input States
   const [inputOnSubmit, setInputOnSubmit] = useState<string>('');
   const [inputMessage, setInputMessage] = useState<string>('');
@@ -35,7 +35,6 @@ export default function Chat(props: Props) {
   // Loading state
   const [loading, setLoading] = useState<boolean>(false);
 
-  // API Key
   const handleTranslate = async () => {
     setInputOnSubmit(inputMessage);
 
@@ -103,15 +102,6 @@ export default function Chat(props: Props) {
 
     setLoading(false);
   };
-  // -------------- Copy Response --------------
-  // const copyToClipboard = (text: string) => {
-  //  const el = document.createElement('textarea');
-  //  el.value = text;
-  //  document.body.appendChild(el);
-  //  el.select();
-  //  document.execCommand('copy');
-  //  document.body.removeChild(el);
-  // };
 
   const handleChange = (Event: any) => {
     setInputMessage(Event.target.value);
@@ -125,12 +115,13 @@ export default function Chat(props: Props) {
       description="AI Generator"
     >
       <div className="relative flex w-full flex-col pt-[20px] md:pt-0">
-        <img
-          width="340"
-          height="181"
-          src={theme === 'dark' ? Bgdark.src : Bg.src}
-          className="absolute left-[20%] top-[50%] z-[0] w-[200px] translate-y-[-50%] md:left-[35%] lg:left-[38%] xl:left-[38%] xl:w-[350px] "
-          alt=""
+        <Image
+          width={340}
+          height={181}
+          src={theme === 'dark' ? Bgdark : Bg}
+          className="absolute left-[20%] top-[50%] z-[0] w-[200px] translate-y-[-50%] md:left-[35%] lg:left-[38%] xl:left-[38%] xl:w-[350px]"
+          alt="AI Chat Background"
+          priority
         />
         <div className="mx-auto flex min-h-[75vh] w-full max-w-[1000px] flex-col xl:min-h-[85vh]">
           {/* Model Change */}
@@ -145,10 +136,7 @@ export default function Chat(props: Props) {
                   model === 'gpt-3.5-turbo'
                     ? 'bg-white dark:bg-zinc-950'
                     : 'transparent'
-                } h-[70xp] w-[174px]
-       ${
-         model === 'gpt-3.5-turbo' ? '' : ''
-       } rounded-lg text-base font-semibold text-zinc-950 dark:text-white`}
+                } h-[70xp] w-[174px] rounded-lg text-base font-semibold text-zinc-950 dark:text-white`}
                 onClick={() => setModel('gpt-3.5-turbo')}
               >
                 GPT-3.5
@@ -158,10 +146,7 @@ export default function Chat(props: Props) {
                   model === 'gpt-4-1106-preview'
                     ? 'bg-white dark:bg-zinc-950'
                     : 'transparent'
-                } h-[70xp] w-[174px]
-       ${
-         model === 'gpt-4-1106-preview' ? '' : ''
-       } rounded-lg text-base font-semibold text-zinc-950 dark:text-white`}
+                } h-[70xp] w-[174px] rounded-lg text-base font-semibold text-zinc-950 dark:text-white`}
                 onClick={() => setModel('gpt-4-1106-preview')}
               >
                 GPT-4

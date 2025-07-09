@@ -24,7 +24,7 @@ export default function WhyChooseUs() {
     {
       icon: Clock,
       title: "Fast Response",
-      description: "Emergency HVAC services available 24/7. We understand that comfort can't wait.",
+      description: "Emergency HVAC services available 24/7. We understand that comfort can&apos;t wait.",
       stats: "24/7 Service"
     },
     {
@@ -59,7 +59,7 @@ export default function WhyChooseUs() {
             </span>
           </h2>
           <p className="text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
-            When it comes to your family's comfort, experience matters. Discover why thousands of Massachusetts families trust us with their HVAC needs.
+            When it comes to your family&apos;s comfort, experience matters. Discover why thousands of Massachusetts families trust us with their HVAC needs.
           </p>
         </div>
 
@@ -98,7 +98,7 @@ export default function WhyChooseUs() {
               Ready to Join Our Family of Satisfied Customers?
             </h3>
             <p className="text-orange-100 text-lg mb-8 max-w-2xl mx-auto">
-              Experience the C&M difference with professional HVAC services that Massachusetts homeowners have trusted for over 30 years.
+              Experience the C&amp;M difference with professional HVAC services that Massachusetts homeowners have trusted for over 30 years.
             </p>
             
             <div className="flex justify-center">

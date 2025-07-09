@@ -11,6 +11,7 @@ import { OpenContext, UserContext } from '@/contexts/layout';
 import { getRedirectMethod } from '@/utils/auth-helpers/settings';
 import { useTheme } from 'next-themes';
 import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 import React, { useContext, useEffect, useState } from 'react';
 import { FiAlignJustify } from 'react-icons/fi';
 import {
@@ -27,7 +28,7 @@ export default function HeaderLinks(props: { [x: string]: any }) {
   const user = useContext(UserContext);
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
-  const router = getRedirectMethod() === 'client' ? useRouter() : null;
+  const router = useRouter(); // Always call the hook
   const onOpen = () => {
     setOpen(false);
   };
@@ -40,7 +41,10 @@ export default function HeaderLinks(props: { [x: string]: any }) {
   const handleSignOut = async (e) => {
     e.preventDefault();
     supabase.auth.signOut();
-    router.push('/dashboard/signin');
+    // Only use router if redirectMethod is 'client'
+    if (getRedirectMethod() === 'client') {
+      router.push('/dashboard/signin');
+    }
   };
   if (!mounted) return null;
   return (
@@ -84,11 +88,11 @@ export default function HeaderLinks(props: { [x: string]: any }) {
               Help & Support
             </Button>
           </a>
-          <a target="blank" href="/#faqs">
+          <Link href="/#faqs" target="_blank">
             <Button variant="outline" className="w-full">
               FAQs & More
             </Button>
-          </a>
+          </Link>
         </DropdownMenuContent>
       </DropdownMenu>
 
@@ -99,7 +103,7 @@ export default function HeaderLinks(props: { [x: string]: any }) {
       >
         <HiOutlineArrowRightOnRectangle className="h-4 w-4 stroke-2 text-zinc-950 dark:text-white" />
       </Button>
-      <a className="w-full" href="/dashboard/settings">
+      <Link className="w-full" href="/dashboard/settings">
         <Avatar className="h-9 min-w-9 md:min-h-10 md:min-w-10">
           <AvatarImage src={user?.user_metadata.avatar_url} />
           <AvatarFallback className="font-bold">
@@ -108,7 +112,7 @@ export default function HeaderLinks(props: { [x: string]: any }) {
               : `${user?.email[0].toUpperCase()}`}
           </AvatarFallback>
         </Avatar>
-      </a>
+      </Link>
     </div>
   );
 }

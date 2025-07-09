@@ -77,7 +77,7 @@ export default function Contact() {
                   Request Your Free Estimate
                 </CardTitle>
                 <p className="text-gray-600">
-                  Fill out the form below and we'll get back to you within 24 hours with a detailed estimate.
+                  Fill out the form below and we&apos;ll get back to you within 24 hours with a detailed estimate.
                 </p>
               </CardHeader>
               

@@ -13,6 +13,7 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Card } from '@/components/ui/card';
 import { IRoute } from '@/types/types';
 import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 import React, { PropsWithChildren, useContext } from 'react';
 import { Scrollbars } from 'react-custom-scrollbars-2';
 import { HiX } from 'react-icons/hi';
@@ -30,7 +31,7 @@ export interface SidebarProps extends PropsWithChildren {
 }
 
 function Sidebar(props: SidebarProps) {
-  const router = getRedirectMethod() === 'client' ? useRouter() : null;
+  const router = useRouter(); // Always call the hook
   const { routes } = props;
 
   const user = useContext(UserContext);
@@ -38,7 +39,10 @@ function Sidebar(props: SidebarProps) {
   const handleSignOut = async (e) => {
     e.preventDefault();
     supabase.auth.signOut();
-    router.push('/dashboard/signin');
+    // Only use router if redirectMethod is 'client'
+    if (getRedirectMethod() === 'client') {
+      router.push('/dashboard/signin');
+    }
   };
   // SIDEBAR
   return (
@@ -93,7 +97,7 @@ function Sidebar(props: SidebarProps) {
 
               {/* Sidebar profile info */}
               <div className="mt-5 flex w-full items-center rounded-lg border border-zinc-200 p-4 dark:border-zinc-800">
-                <a href="/dashboard/dashboard/settings">
+                <Link href="/dashboard/settings">
                   <Avatar className="min-h-10 min-w-10">
                     <AvatarImage src={user?.user_metadata.avatar_url} />
                     <AvatarFallback className="font-bold dark:text-zinc-950">
@@ -102,14 +106,14 @@ function Sidebar(props: SidebarProps) {
                         : `${user?.user_metadata.email[0].toUpperCase()}`} */}
                     </AvatarFallback>
                   </Avatar>
-                </a>
-                <a href="/dashboard/settings">
+                </Link>
+                <Link href="/dashboard/settings">
                   <p className="ml-2 mr-3 flex items-center text-sm font-semibold leading-none text-zinc-950 dark:text-white">
                     {userDetails?.full_name ||
                       user?.user_metadata?.full_name ||
                       'User'}
                   </p>
-                </a>
+                </Link>
                 <Button
                   onClick={(e) => handleSignOut(e)}
                   variant="outline"

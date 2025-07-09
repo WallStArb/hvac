@@ -48,7 +48,7 @@ export default function About() {
             <span className="block gradient-text mt-2">HVAC Experts</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Family-owned and operated for over 30 years, C&M Heating & Cooling has been Greater Boston's trusted partner for home comfort solutions.
+            Family-owned and operated for over 30 years, C&M Heating & Cooling has been Greater Boston&apos;s trusted partner for home comfort solutions.
           </p>
         </div>
 
@@ -66,7 +66,7 @@ export default function About() {
                       For over 30 years, Giovanni Montefusco has been dedicated to providing exceptional HVAC services to Massachusetts families. What started as a passion for helping people stay comfortable in their homes has grown into a trusted business serving thousands of customers across the state.
                     </p>
                     <p>
-                      "At C&M Heating & Cooling, we're not just fixing equipment – we're ensuring your family's comfort and safety. Every job is personal to us because we understand how important your home is to you."
+                      &quot;At C&M Heating &amp; Cooling, we&apos;re not just fixing equipment – we&apos;re ensuring your family&apos;s comfort and safety. Every job is personal to us because we understand how important your home is to you.&quot;
                     </p>
                     <p className="font-medium text-gray-900">
                       — Giovanni Montefusco, Owner

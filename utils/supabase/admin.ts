@@ -43,7 +43,7 @@ const upsertPriceRecord = async (
   const priceData: Price = {
     id: price.id,
     description: '',
-    metadata: { shit: true },
+    metadata: {},
     product_id: typeof price.product === 'string' ? price.product : '',
     active: price.active,
     currency: price.currency,
@@ -60,7 +60,6 @@ const upsertPriceRecord = async (
 
   if (upsertError?.message.includes('foreign key constraint')) {
     if (retryCount < maxRetries) {
-
       await new Promise((resolve) => setTimeout(resolve, 2000));
       await upsertPriceRecord(price, retryCount + 1, maxRetries);
     } else {
@@ -70,8 +69,6 @@ const upsertPriceRecord = async (
     }
   } else if (upsertError) {
     throw new Error(`Price insert/update failed: ${upsertError.message}`);
-  } else {
-  
   }
 };
 
