@@ -39,7 +39,7 @@ export default function Hero() {
               </Badge>
             </div>
 
-            <h1 className="text-5xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+            <h1 className="text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
               <span className="block">24 HOUR SERVICE</span>
               <span className="bg-gradient-to-r from-orange-300 to-orange-100 bg-clip-text text-transparent">
                 HVAC Expert
