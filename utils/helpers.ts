@@ -1,7 +1,3 @@
-import { Database } from '@/types/types_db';
-
-type Price = Database['public']['Tables']['prices']['Row'];
-
 export const getURL = (path?: string) => {
   let url =
     process?.env?.NEXT_PUBLIC_SITE_URL ?? // Set this to your site URL in production env.
@@ -22,15 +18,13 @@ export const getURL = (path?: string) => {
   return url;
 };
 
-export const postData = async ({
+export const postData = async <T = any>({
   url,
   data
 }: {
   url: string;
-  data?: { price: Price };
+  data?: T;
 }) => {
-
-
   const res = await fetch(url, {
     method: 'POST',
     headers: new Headers({ 'Content-Type': 'application/json' }),
@@ -39,8 +33,6 @@ export const postData = async ({
   });
 
   if (!res.ok) {
-
-
     throw Error(res.statusText);
   }
 
