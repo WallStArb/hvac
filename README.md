@@ -84,42 +84,44 @@ MIT License. See [LICENSE](LICENSE) for details.
 
 ---
 
-## 🧰 Offered HVAC Services
+## 🧰 Offered HVAC Services — Metro Boston Area
 
 ### Basic HVAC Maintenance (Annual)
 
+**Flat Rate: $129–$159 per system**  
+*(Discounts for multiple systems or repeat customers)*
+
 - **Comprehensive Inspection:**
-  - Checking all major components, including the thermostat, coils, refrigerant levels, electrical connections, and ductwork, ensuring everything is in good working order.
+  - All major components checked (thermostat, coils, refrigerant, electrical, ductwork).
 - **Air Filter Replacement:**
-  - Changing or cleaning air filters to maintain proper airflow and prevent dust and debris buildup.
+  - Includes standard filter; premium filters available at cost.
 - **Minor Repairs:**
-  - Addressing minor issues like tightening loose connections or clearing condensate lines.
+  - Tightening connections, clearing condensate lines, and other small fixes included.
+
+> **Note:** The goal is to provide honest, thorough service at a fair price, not to upsell unnecessary repairs.
 
 ### Additional Services (Optional)
 
 - **Duct Cleaning:**
-  - Cleaning air ducts to remove dust, allergens, and debris, which can improve air quality and system efficiency.
+  - $300–$500 per home (varies by size; discounted with maintenance)
 - **Refrigerant Recharge:**
-  - Ensuring proper refrigerant levels for optimal cooling performance, with costs ranging from $200 to $450 for a recharge (source: This Old House).
+  - $180–$350 (includes leak check; only if needed)
 - **System Energy Audit:**
-  - Assessing the energy efficiency of the HVAC system and identifying areas for improvement, typically costing $100 to $300.
+  - $99–$199 (waived if major work is recommended and performed)
 
-### Cost Factors
+### Relationship-First Philosophy
 
-- **System Type:**
-  - Different systems (e.g., central AC, furnace, heat pump, mini-split) may have varying maintenance requirements and associated costs (source: Angie's List).
-- **Maintenance Plan:**
-  - Some HVAC companies offer comprehensive maintenance plans that include regular service visits, priority scheduling, and discounts on repairs (source: FieldEdge).
-- **Location:**
-  - Service costs can vary based on geographic location and the local market rates (source: Angie's List).
+- **No Pressure, No Gimmicks:**
+  - Maintenance visits are about keeping your system healthy and building trust, not pushing expensive add-ons.
+- **Yearly Reminders:**
+  - We’ll reach out each year to help you stay on top of maintenance.
+- **Priority Scheduling:**
+  - Returning customers get first choice for seasonal tune-ups and emergency calls.
+- **Transparent Pricing:**
+  - All costs are clear up front—no hidden fees.
 
-### Benefits of Preventative Maintenance
+#### Why This Approach Works
 
-- **Extended Lifespan:**
-  - Regular maintenance can help extend the lifespan of your HVAC equipment, delaying the need for costly replacements (source: Waconia Comfort).
-- **Improved Efficiency:**
-  - Proper maintenance ensures the system operates at peak efficiency, reducing energy consumption and lowering utility bills (source: Cielo WiGle).
-- **Reduced Repair Costs:**
-  - By identifying and addressing minor issues early on, you can prevent them from escalating into major, expensive repairs.
-- **Enhanced Comfort:**
-  - Regular maintenance ensures consistent and reliable heating and cooling, improving overall comfort in your home or business. 
+- **Builds Trust:** Customers appreciate honesty and reliability.
+- **Encourages Loyalty:** Regular, affordable service keeps you top-of-mind.
+- **Word-of-Mouth:** Satisfied customers are your best marketing. 
