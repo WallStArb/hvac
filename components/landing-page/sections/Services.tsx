@@ -3,6 +3,7 @@ import { Snowflake, Flame, Wind, Wrench, Zap, ThermometerSun, Shield, Clock, Sta
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
+import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from '@/components/ui/accordion';
 
 export default function Services() {
   const services = [
@@ -139,15 +140,33 @@ export default function Services() {
                     <div className={`text-2xl font-bold bg-gradient-to-r ${service.color} bg-clip-text text-transparent mb-4`}>
                       {service.price}
                     </div>
-                    
-                    <ul className="space-y-3">
-                      {service.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center text-gray-600">
-                          <div className={`w-2 h-2 bg-gradient-to-r ${service.color} rounded-full mr-3 flex-shrink-0`} />
-                          <span>{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
+                    {/* Only use accordion for the combo card */}
+                    {service.title === 'Annual Maintenance Combo (AC + Furnace, One Call)' ? (
+                      <Accordion type="single" collapsible>
+                        <AccordionItem value="details">
+                          <AccordionTrigger>View Details</AccordionTrigger>
+                          <AccordionContent>
+                            <ul className="space-y-3">
+                              {service.features.map((feature, featureIndex) => (
+                                <li key={featureIndex} className="flex items-center text-gray-600">
+                                  <div className={`w-2 h-2 bg-gradient-to-r ${service.color} rounded-full mr-3 flex-shrink-0`} />
+                                  <span>{feature}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          </AccordionContent>
+                        </AccordionItem>
+                      </Accordion>
+                    ) : (
+                      <ul className="space-y-3">
+                        {service.features.map((feature, featureIndex) => (
+                          <li key={featureIndex} className="flex items-center text-gray-600">
+                            <div className={`w-2 h-2 bg-gradient-to-r ${service.color} rounded-full mr-3 flex-shrink-0`} />
+                            <span>{feature}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
                   </div>
 
                   <div className="text-center">
