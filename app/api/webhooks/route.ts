@@ -1,5 +1,5 @@
 import Stripe from 'stripe';
-import { stripe } from '@/utils/stripe/config';
+// import { stripe } from '@/utils/stripe/config'; // Remove this line
 import {
   upsertProductRecord,
   upsertPriceRecord,
@@ -22,6 +22,8 @@ export async function POST(req: Request) {
   if (!process.env.STRIPE_API_KEY) {
     return new Response('Stripe not configured', { status: 501 });
   }
+  // Initialize Stripe client only if key is present
+  const stripe = new Stripe(process.env.STRIPE_API_KEY, { apiVersion: '2025-06-30.basil' });
   const body = await req.text();
   const headersList = await headers();
   const sig = headersList.get('Stripe-Signature') as string;
@@ -32,7 +34,6 @@ export async function POST(req: Request) {
     if (!sig || !webhookSecret) return;
     event = stripe.webhooks.constructEvent(body, sig, webhookSecret);
   } catch (err) {
-
     return new Response(`Webhook Error: ${err.message}`, { status: 400 });
   }
 
@@ -72,7 +73,6 @@ export async function POST(req: Request) {
           throw new Error('Unhandled relevant event!');
       }
     } catch (error) {
-  
       return new Response(
         'Webhook handler failed. View your nextjs function logs.',
         {
