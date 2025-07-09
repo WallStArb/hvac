@@ -10,7 +10,7 @@ import { IoMoon, IoSunny } from 'react-icons/io5';
 import Link from 'next/link';
 
 interface DefaultAuthLayoutProps extends PropsWithChildren {
-  children: JSX.Element;
+  children: React.ReactElement;
   viewProp: any;
 }
 

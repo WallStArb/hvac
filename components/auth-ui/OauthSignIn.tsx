@@ -10,7 +10,7 @@ import { Input } from '../ui/input';
 type OAuthProviders = {
   name: Provider;
   displayName: string;
-  icon: JSX.Element;
+  icon: React.ReactElement;
 };
 
 export default function OauthSignIn() {

@@ -1,5 +1,5 @@
 import Stripe from 'stripe';
-import { ComponentType, ReactNode } from 'react';
+import { ComponentType, ReactNode, ReactElement } from 'react';
 
 export type OpenAIModel =
   | 'gpt-3.5-turbo'
@@ -102,7 +102,7 @@ export interface IRoute {
   exact?: boolean;
   component?: ComponentType;
   disabled?: boolean;
-  icon?: JSX.Element;
+  icon?: ReactElement;
   secondary?: boolean;
   collapse?: boolean;
   items?: IRoute[];
