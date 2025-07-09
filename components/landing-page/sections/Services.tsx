@@ -137,23 +137,18 @@ export default function Services() {
 
                 <CardContent className="relative pt-0">
                   <div className="mb-6">
-                    <div className={`text-2xl font-bold bg-gradient-to-r ${service.color} bg-clip-text text-transparent mb-4`}>
-                      {service.price}
-                    </div>
-                    {/* Only use accordion for the combo card */}
+                    {/* For Annual Maintenance card, replace price display and icons row with a centered, stacked layout */}
                     {service.title === 'Annual Maintenance' && (
-                      <div className="flex justify-center gap-4 mb-4">
+                      <div className="flex justify-center gap-8 mb-4">
                         <div className="flex flex-col items-center">
                           <Snowflake className="w-6 h-6 text-blue-500 mb-1" />
-                          <span className="text-xs font-semibold text-gray-700">AC</span>
-                        </div>
-                        <div className="flex flex-col items-center">
-                          <Flame className="w-6 h-6 text-orange-500 mb-1" />
-                          <span className="text-xs font-semibold text-gray-700">Furnace</span>
+                          <span className="text-xs font-semibold text-gray-700">AC or Furnace</span>
+                          <span className="text-xl font-bold text-gray-900">$129</span>
                         </div>
                         <div className="flex flex-col items-center">
                           <Star className="w-6 h-6 text-purple-500 mb-1" />
                           <span className="text-xs font-semibold text-gray-700">Both</span>
+                          <span className="text-xl font-bold text-gray-900">$179</span>
                         </div>
                       </div>
                     )}
@@ -191,6 +186,24 @@ export default function Services() {
                                 <li><strong>Are there any contracts or hidden fees?</strong> <br />No contracts, no hidden fees—just honest, transparent pricing.</li>
                               </ul>
                             </div>
+                          </AccordionContent>
+                        </AccordionItem>
+                      </Accordion>
+                    )}
+                    {/* For Additional Services card, add dropdown for features */}
+                    {service.title === 'Additional Services' && (
+                      <Accordion type="single" collapsible>
+                        <AccordionItem value="details">
+                          <AccordionTrigger>See Details</AccordionTrigger>
+                          <AccordionContent>
+                            <ul className="space-y-3">
+                              {service.features.map((feature, featureIndex) => (
+                                <li key={featureIndex} className="flex items-center text-gray-600">
+                                  <div className={`w-2 h-2 bg-gradient-to-r ${service.color} rounded-full mr-3 flex-shrink-0`} />
+                                  <span>{feature}</span>
+                                </li>
+                              ))}
+                            </ul>
                           </AccordionContent>
                         </AccordionItem>
                       </Accordion>
