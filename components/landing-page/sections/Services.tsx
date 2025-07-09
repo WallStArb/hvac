@@ -210,11 +210,6 @@ export default function Services() {
                     )}
                   </div>
 
-                  <div className="text-center">
-                    <div className="text-gray-600 text-sm">
-                      Call <a href="tel:(978) 360-3367" className="text-blue-600 hover:underline font-semibold">(978) 360-3367</a> for pricing
-                    </div>
-                  </div>
                 </CardContent>
               </Card>
             );
