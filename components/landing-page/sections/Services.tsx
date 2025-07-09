@@ -44,21 +44,47 @@ export default function Services() {
     },
     {
       icon: Wrench,
-      title: "Commercial Rooftop Units",
-      description: "Professional commercial HVAC installation and service for rooftop units and systems.",
-      price: "Starting at $199",
-      features: ["Rooftop Unit Installation", "Commercial Repair", "Preventive Maintenance", "System Design"],
-      color: "from-purple-500 to-indigo-600",
-      highlight: "Commercial"
+      title: "One-Time Annual Maintenance",
+      description: "Flat Rate: $129 per system. Includes a comprehensive inspection, standard air filter replacement, and minor tune-ups. Perfect for new or occasional customers.",
+      price: "$129 / system",
+      features: [
+        "Full system inspection (thermostat, coils, refrigerant, electrical, ductwork)",
+        "Standard air filter included",
+        "Minor tune-ups (tightening, clearing lines)",
+        "No contract required"
+      ],
+      color: "from-green-500 to-blue-600",
+      highlight: "One-Time Service"
     },
     {
-      icon: ThermometerSun,
-      title: "New Installation",
-      description: "Complete HVAC system installation with professional design and reliable equipment.",
-      price: "Free Estimates",
-      features: ["System Design", "Professional Installation", "Equipment Selection", "Warranty Service"],
+      icon: Star,
+      title: "Membership Annual Maintenance",
+      description: "$159 per system per year. Includes all one-time maintenance features plus yearly reminders, priority scheduling, and exclusive member discounts. Best for ongoing care and peace of mind.",
+      price: "$159 / system / year",
+      features: [
+        "Everything in One-Time Maintenance",
+        "Yearly maintenance reminder",
+        "Priority scheduling",
+        "Exclusive member discounts",
+        "Relationship-first approach"
+      ],
+      color: "from-blue-500 to-purple-600",
+      highlight: "Best Value"
+    },
+    {
+      icon: Star,
+      title: "Additional Services",
+      description: "Enhance your comfort and efficiency with our optional services.",
+      price: "See Details",
+      features: [
+        "Duct Cleaning: $300–$500 per home (improves air quality)",
+        "Refrigerant Recharge: $180–$350 (includes leak check, only if needed)",
+        "System Energy Audit: $99–$199 (waived with major work)",
+        "Commercial Rooftop Units: Installation, repair, maintenance, design (Call for pricing)",
+        "New Installation: Complete system design & install (Free Estimates)"
+      ],
       color: "from-yellow-500 to-orange-500",
-      highlight: "Free Estimate"
+      highlight: "Full Service"
     }
   ];
 
