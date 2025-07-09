@@ -45,7 +45,7 @@ export default function Services() {
     },
     {
       icon: Star,
-      title: "Annual Maintenance (AC and/or Furnace, One Call)",
+      title: "Annual Maintenance",
       description: "Choose AC, furnace, or both in a single visit. Simple, transparent pricing.",
       price: "$129 (AC or Furnace) | $179 (Both)",
       features: [
@@ -141,7 +141,7 @@ export default function Services() {
                       {service.price}
                     </div>
                     {/* Only use accordion for the combo card */}
-                    {service.title === 'Annual Maintenance (AC and/or Furnace, One Call)' && (
+                    {service.title === 'Annual Maintenance' && (
                       <div className="flex justify-center gap-4 mb-4">
                         <div className="flex flex-col items-center">
                           <Snowflake className="w-6 h-6 text-blue-500 mb-1" />
@@ -157,47 +157,40 @@ export default function Services() {
                         </div>
                       </div>
                     )}
-                    {/* Details dropdown for pricing breakdown and features */}
-                    {service.title === 'Annual Maintenance (AC and/or Furnace, One Call)' && (
+                    {/* Single dropdown for details and FAQ */}
+                    {service.title === 'Annual Maintenance' && (
                       <Accordion type="single" collapsible>
                         <AccordionItem value="details">
-                          <AccordionTrigger>View Details</AccordionTrigger>
+                          <AccordionTrigger>View Details & FAQ</AccordionTrigger>
                           <AccordionContent>
-                            <div className="mb-2">
+                            <div className="mb-2 text-sm text-gray-700">
+                              <div className="font-semibold mb-1">How it works:</div>
+                              <div className="mb-2">Choose AC, furnace, or both in a single visit. $129 for AC or furnace, $179 for both. Each additional system 40% off (e.g., 2 systems: $129 + $77 = $206, both + 1: $179 + $107 = $286). Transparent, no contracts, and industry-backed care.</div>
                               <div className="font-semibold mb-1">Discounts:</div>
-                              <ul className="list-disc pl-5 text-gray-700 text-sm mb-2">
+                              <ul className="list-disc pl-5 mb-2">
                                 <li>Each additional system 40% off</li>
                                 <li>Example: 2 systems: $129 + $77 = $206</li>
                                 <li>Both + 1: $179 + $107 = $286</li>
                               </ul>
+                              <div className="font-semibold mb-1">What’s Included:</div>
+                              <ul className="list-disc pl-5 mb-2">
+                                <li>Comprehensive inspection of all selected systems</li>
+                                <li>Standard air filter replacement</li>
+                                <li>Minor tune-ups (tightening, clearing lines, etc.)</li>
+                                <li>Priority scheduling</li>
+                                <li>Exclusive member discounts</li>
+                                <li>No contracts, no hidden fees</li>
+                                <li>Backed by industry standards for efficiency, comfort, and peace of mind</li>
+                              </ul>
+                              <div className="font-semibold mb-1">FAQ:</div>
+                              <ul className="space-y-2">
+                                <li><strong>What counts as a system?</strong> <br />Each AC unit or furnace is considered a separate system.</li>
+                                <li><strong>Can I book just AC or just furnace?</strong> <br />Yes! You can choose either, or both for the best value.</li>
+                                <li><strong>How does the discount work?</strong> <br />After the first system, each additional system in the same visit is 40% off the base price.</li>
+                                <li><strong>What’s included in the service?</strong> <br />Comprehensive inspection, standard air filter replacement, minor tune-ups, and a detailed report.</li>
+                                <li><strong>Are there any contracts or hidden fees?</strong> <br />No contracts, no hidden fees—just honest, transparent pricing.</li>
+                              </ul>
                             </div>
-                            <div className="font-semibold mb-1">What’s Included:</div>
-                            <ul className="list-disc pl-5 text-gray-700 text-sm">
-                              <li>Comprehensive inspection of all selected systems</li>
-                              <li>Standard air filter replacement</li>
-                              <li>Minor tune-ups (tightening, clearing lines, etc.)</li>
-                              <li>Priority scheduling</li>
-                              <li>Exclusive member discounts</li>
-                              <li>No contracts, no hidden fees</li>
-                              <li>Backed by industry standards for efficiency, comfort, and peace of mind</li>
-                            </ul>
-                          </AccordionContent>
-                        </AccordionItem>
-                      </Accordion>
-                    )}
-                    {/* FAQ dropdown */}
-                    {service.title === 'Annual Maintenance (AC and/or Furnace, One Call)' && (
-                      <Accordion type="single" collapsible className="mt-2">
-                        <AccordionItem value="faq">
-                          <AccordionTrigger>FAQ</AccordionTrigger>
-                          <AccordionContent>
-                            <ul className="space-y-2 text-gray-700 text-sm">
-                              <li><strong>What counts as a system?</strong> <br />Each AC unit or furnace is considered a separate system.</li>
-                              <li><strong>Can I book just AC or just furnace?</strong> <br />Yes! You can choose either, or both for the best value.</li>
-                              <li><strong>How does the discount work?</strong> <br />After the first system, each additional system in the same visit is 40% off the base price.</li>
-                              <li><strong>What’s included in the service?</strong> <br />Comprehensive inspection, standard air filter replacement, minor tune-ups, and a detailed report.</li>
-                              <li><strong>Are there any contracts or hidden fees?</strong> <br />No contracts, no hidden fees—just honest, transparent pricing.</li>
-                            </ul>
                           </AccordionContent>
                         </AccordionItem>
                       </Accordion>
