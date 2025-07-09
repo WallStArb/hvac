@@ -7,19 +7,36 @@ export type OpenAIModel =
   | 'gpt-4-1106-preview'
   | 'gpt-4o';
 
+export type OpenRouterModel =
+  | 'openai/gpt-3.5-turbo'
+  | 'openai/gpt-4'
+  | 'openai/gpt-4-turbo'
+  | 'anthropic/claude-3.5-sonnet'
+  | 'anthropic/claude-3-haiku'
+  | 'google/gemini-pro'
+  | 'meta-llama/llama-3.1-8b-instruct'
+  | 'meta-llama/llama-3.1-70b-instruct'
+  | 'mistralai/mistral-7b-instruct'
+  | 'microsoft/wizardlm-2-8x22b'
+  | 'perplexity/llama-3.1-8b-instruct'
+  | 'perplexity/llama-3.1-70b-instruct';
+
+export type AIModel = OpenAIModel | OpenRouterModel;
+
 export interface TranslateBody {
   // inputLanguage: string;
   // outputLanguage: string;
   topic: string;
   paragraphs: string;
   essayType: string;
-  model: OpenAIModel;
+  model: AIModel;
   type?: 'review' | 'refactor' | 'complexity' | 'normal';
 }
 export interface ChatBody {
   inputMessage: string;
-  model: OpenAIModel;
+  model: AIModel;
   apiKey?: string | undefined | null;
+  provider?: 'openai' | 'openrouter';
 }
 export interface TranslateResponse {
   code: string;
@@ -114,8 +131,9 @@ export interface EssayBody {
   topic: string;
   words: '300' | '200';
   essayType: '' | 'Argumentative' | 'Classic' | 'Persuasive' | 'Critique';
-  model: OpenAIModel;
+  model: AIModel;
   apiKey?: string | undefined;
+  provider?: 'openai' | 'openrouter';
 }
 export interface PremiumEssayBody {
   words: string;

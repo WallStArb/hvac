@@ -35,6 +35,7 @@ A modern, AI-powered HVAC management platform built with Next.js, Supabase, and 
 - **Supabase Auth** - Authentication and user management
 - **Stripe 18.3.0** - Payment processing with latest API
 - **OpenAI API 5.8.3** - AI chat functionality
+- **OpenRouter API** - Multi-provider AI model access (GPT, Claude, Gemini, etc.)
 
 ### Charts & Data Visualization
 - **ApexCharts 4.7.0** - Interactive charts and analytics
@@ -54,7 +55,7 @@ Before running this project, make sure you have:
 - **npm** or **yarn**
 - **Supabase account** and project
 - **Stripe account** (for payment features)
-- **OpenAI API key** (for AI chat)
+- **OpenAI API key** (for AI chat) OR **OpenRouter API key** (for multi-provider AI)
 
 ## 🚀 Getting Started
 
@@ -83,8 +84,9 @@ NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=your_stripe_publishable_key
 STRIPE_SECRET_KEY=your_stripe_secret_key
 STRIPE_WEBHOOK_SECRET=your_stripe_webhook_secret
 
-# OpenAI Configuration
+# AI Configuration (Choose one or both)
 OPENAI_API_KEY=your_openai_api_key
+NEXT_PUBLIC_OPENROUTER_API_KEY=your_openrouter_api_key
 
 # Application Settings
 NEXT_PUBLIC_SITE_URL=http://localhost:3000
@@ -180,8 +182,11 @@ This Next.js application can be deployed to any platform that supports Node.js:
 | `NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY` | Stripe publishable key | ✅ |
 | `STRIPE_SECRET_KEY` | Stripe secret key | ✅ |
 | `STRIPE_WEBHOOK_SECRET` | Stripe webhook secret | ✅ |
-| `OPENAI_API_KEY` | OpenAI API key | ✅ |
+| `OPENAI_API_KEY` | OpenAI API key | ⚠️ |
+| `NEXT_PUBLIC_OPENROUTER_API_KEY` | OpenRouter API key | ⚠️ |
 | `NEXT_PUBLIC_SITE_URL` | Application URL | ✅ |
+
+> **Note:** You need at least one AI API key (OpenAI or OpenRouter) for the chat functionality to work.
 
 ## 📱 Features Overview
 
@@ -192,6 +197,8 @@ This Next.js application can be deployed to any platform that supports Node.js:
 - Equipment status tracking
 
 ### AI Chat Assistant
+- **Multi-Provider AI Support** - Choose between OpenAI and OpenRouter
+- **Multiple AI Models** - GPT, Claude, Gemini, Llama, and more
 - Natural language HVAC troubleshooting
 - Maintenance scheduling assistance
 - Technical documentation search
@@ -217,6 +224,7 @@ This Next.js application can be deployed to any platform that supports Node.js:
 - ✅ **TypeScript 5.8.3** - Enhanced type safety
 - ✅ **Stripe 18.3.0** - Latest payment processing features
 - ✅ **OpenAI 5.8.3** - Latest AI capabilities
+- ✅ **OpenRouter Integration** - Multi-provider AI model access
 - ✅ **Supabase 2.30.4** - Latest database features
 - ✅ **ApexCharts 4.7.0** - Enhanced charting capabilities
 - ✅ **Framer Motion 12.23.0** - Improved animations
@@ -228,6 +236,7 @@ This Next.js application can be deployed to any platform that supports Node.js:
 - ✅ Fixed JSX.Element type definitions
 - ✅ Updated Stripe API version compatibility
 - ✅ Enhanced Supabase SSR integration
+- ✅ Added OpenRouter multi-provider AI support
 
 ## 🤝 Contributing
 

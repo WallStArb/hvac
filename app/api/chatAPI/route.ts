@@ -1,20 +1,25 @@
 import { ChatBody } from '@/types/types';
 import { OpenAIStream } from '@/utils/streams/chatStream';
+import { OpenRouterStream } from '@/utils/streams/openRouterStream';
 
 export const runtime = 'edge';
 
 export async function GET(req: Request): Promise<Response> {
   try {
-    const { inputMessage, model, apiKey } = (await req.json()) as ChatBody;
+    const { inputMessage, model, apiKey, provider = 'openai' } = (await req.json()) as ChatBody;
 
     let apiKeyFinal;
     if (apiKey) {
       apiKeyFinal = apiKey;
     } else {
-      apiKeyFinal = process.env.NEXT_PUBLIC_OPENAI_API_KEY;
+      apiKeyFinal = provider === 'openrouter' 
+        ? process.env.NEXT_PUBLIC_OPENROUTER_API_KEY 
+        : process.env.NEXT_PUBLIC_OPENAI_API_KEY;
     }
 
-    const stream = await OpenAIStream(inputMessage, model, apiKeyFinal);
+    const stream = provider === 'openrouter' 
+      ? await OpenRouterStream(inputMessage, model, apiKeyFinal)
+      : await OpenAIStream(inputMessage, model, apiKeyFinal);
 
     return new Response(stream);
   } catch (error) {
@@ -22,18 +27,23 @@ export async function GET(req: Request): Promise<Response> {
     return new Response('Error', { status: 500 });
   }
 }
+
 export async function POST(req: Request): Promise<Response> {
   try {
-    const { inputMessage, model, apiKey } = (await req.json()) as ChatBody;
+    const { inputMessage, model, apiKey, provider = 'openai' } = (await req.json()) as ChatBody;
 
     let apiKeyFinal;
     if (apiKey) {
       apiKeyFinal = apiKey;
     } else {
-      apiKeyFinal = process.env.NEXT_PUBLIC_OPENAI_API_KEY;
+      apiKeyFinal = provider === 'openrouter' 
+        ? process.env.NEXT_PUBLIC_OPENROUTER_API_KEY 
+        : process.env.NEXT_PUBLIC_OPENAI_API_KEY;
     }
 
-    const stream = await OpenAIStream(inputMessage, model, apiKeyFinal);
+    const stream = provider === 'openrouter' 
+      ? await OpenRouterStream(inputMessage, model, apiKeyFinal)
+      : await OpenAIStream(inputMessage, model, apiKeyFinal);
 
     return new Response(stream);
   } catch (error) {
