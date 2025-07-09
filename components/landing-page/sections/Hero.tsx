@@ -45,6 +45,9 @@ export default function Hero() {
                 HVAC Expert
               </span>
             </h1>
+            <div className="mb-4">
+              <p className="text-orange-200 font-semibold text-lg text-center lg:text-left">Proudly serving the North Shore and Metro Boston area</p>
+            </div>
 
             <p className="text-xl lg:text-2xl text-blue-100 mb-8 leading-relaxed">
               Oil & Gas Services • New Installation • Ductless Systems • Central Air
