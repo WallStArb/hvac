@@ -32,8 +32,8 @@ export default function Chat(props: Props) {
   // Response message
   const [outputCode, setOutputCode] = useState<string>('');
   // AI model and provider
-  const [model, setModel] = useState<AIModel>('gpt-3.5-turbo');
-  const [provider, setProvider] = useState<'openai' | 'openrouter'>('openai');
+  const [model, setModel] = useState<AIModel>('qwen/qwq-32b:free');
+  const [provider, setProvider] = useState<'openai' | 'openrouter'>('openrouter');
   // Loading state
   const [loading, setLoading] = useState<boolean>(false);
 
@@ -116,7 +116,7 @@ export default function Chat(props: Props) {
     if (newProvider === 'openai') {
       setModel('gpt-3.5-turbo');
     } else {
-      setModel('openai/gpt-3.5-turbo');
+      setModel('qwen/qwq-32b:free');
     }
   };
 
@@ -137,30 +137,6 @@ export default function Chat(props: Props) {
           priority
         />
         <div className="mx-auto flex min-h-[75vh] w-full max-w-[1000px] flex-col xl:min-h-[85vh]">
-          {/* Provider Selection */}
-          <div className="z-[2] mx-auto mb-3 flex w-max rounded-lg bg-zinc-100 p-1 dark:bg-zinc-800">
-            <div
-              className={`flex cursor-pointer items-center justify-center py-2 transition-all duration-75 ${
-                provider === 'openai'
-                  ? 'bg-white dark:bg-zinc-950'
-                  : 'transparent'
-              } h-[50px] w-[120px] rounded-lg text-sm font-semibold text-zinc-950 dark:text-white`}
-              onClick={() => handleProviderChange('openai')}
-            >
-              OpenAI
-            </div>
-            <div
-              className={`flex cursor-pointer items-center justify-center py-2 transition-colors duration-75 ${
-                provider === 'openrouter'
-                  ? 'bg-white dark:bg-zinc-950'
-                  : 'transparent'
-              } h-[50px] w-[120px] rounded-lg text-sm font-semibold text-zinc-950 dark:text-white`}
-              onClick={() => handleProviderChange('openrouter')}
-            >
-              OpenRouter
-            </div>
-          </div>
-
           {/* Model Selection */}
           <div
             className={`flex w-full flex-col ${
@@ -168,73 +144,66 @@ export default function Chat(props: Props) {
             }`}
           >
             <div className="z-[2] mx-auto mb-5 flex w-max rounded-lg bg-zinc-100 p-1 dark:bg-zinc-800">
-              {provider === 'openai' ? (
-                <>
-                  <div
-                    className={`flex cursor-pointer items-center justify-center py-2 transition-all duration-75 ${
-                      model === 'gpt-3.5-turbo'
-                        ? 'bg-white dark:bg-zinc-950'
-                        : 'transparent'
-                    } h-[70px] w-[174px] rounded-lg text-base font-semibold text-zinc-950 dark:text-white`}
-                    onClick={() => setModel('gpt-3.5-turbo')}
-                  >
-                    GPT-3.5
-                  </div>
-                  <div
-                    className={`flex cursor-pointer items-center justify-center py-2 transition-colors duration-75 ${
-                      model === 'gpt-4-1106-preview'
-                        ? 'bg-white dark:bg-zinc-950'
-                        : 'transparent'
-                    } h-[70px] w-[174px] rounded-lg text-base font-semibold text-zinc-950 dark:text-white`}
-                    onClick={() => setModel('gpt-4-1106-preview')}
-                  >
-                    GPT-4
-                  </div>
-                </>
-              ) : (
-                <>
-                  <div
-                    className={`flex cursor-pointer items-center justify-center py-2 transition-all duration-75 ${
-                      model === 'openai/gpt-3.5-turbo'
-                        ? 'bg-white dark:bg-zinc-950'
-                        : 'transparent'
-                    } h-[70px] w-[174px] rounded-lg text-base font-semibold text-zinc-950 dark:text-white`}
-                    onClick={() => setModel('openai/gpt-3.5-turbo')}
-                  >
-                    GPT-3.5
-                  </div>
-                  <div
-                    className={`flex cursor-pointer items-center justify-center py-2 transition-colors duration-75 ${
-                      model === 'anthropic/claude-3.5-sonnet'
-                        ? 'bg-white dark:bg-zinc-950'
-                        : 'transparent'
-                    } h-[70px] w-[174px] rounded-lg text-base font-semibold text-zinc-950 dark:text-white`}
-                    onClick={() => setModel('anthropic/claude-3.5-sonnet')}
-                  >
-                    Claude 3.5
-                  </div>
-                  <div
-                    className={`flex cursor-pointer items-center justify-center py-2 transition-colors duration-75 ${
-                      model === 'google/gemini-pro'
-                        ? 'bg-white dark:bg-zinc-950'
-                        : 'transparent'
-                    } h-[70px] w-[174px] rounded-lg text-base font-semibold text-zinc-950 dark:text-white`}
-                    onClick={() => setModel('google/gemini-pro')}
-                  >
-                    Gemini Pro
-                  </div>
-                  <div
-                    className={`flex cursor-pointer items-center justify-center py-2 transition-colors duration-75 ${
-                      model === 'tngtech/deepseek-r1t2-chimera:free'
-                        ? 'bg-white dark:bg-zinc-950'
-                        : 'transparent'
-                    } h-[70px] w-[174px] rounded-lg text-base font-semibold text-zinc-950 dark:text-white`}
-                    onClick={() => setModel('tngtech/deepseek-r1t2-chimera:free')}
-                  >
-                    DeepSeek R1T2
-                  </div>
-                </>
-              )}
+              <div
+                className={`flex cursor-pointer items-center justify-center py-2 transition-all duration-75 ${
+                  model === 'qwen/qwq-32b:free'
+                    ? 'bg-white dark:bg-zinc-950'
+                    : 'transparent'
+                } h-[70px] w-[174px] rounded-lg text-base font-semibold text-zinc-950 dark:text-white`}
+                onClick={() => setModel('qwen/qwq-32b:free')}
+              >
+                QWQ-32B
+              </div>
+              <div
+                className={`flex cursor-pointer items-center justify-center py-2 transition-colors duration-75 ${
+                  model === 'deepseek/deepseek-chat-v3-0324:free'
+                    ? 'bg-white dark:bg-zinc-950'
+                    : 'transparent'
+                } h-[70px] w-[174px] rounded-lg text-base font-semibold text-zinc-950 dark:text-white`}
+                onClick={() => setModel('deepseek/deepseek-chat-v3-0324:free')}
+              >
+                DeepSeek Chat
+              </div>
+              <div
+                className={`flex cursor-pointer items-center justify-center py-2 transition-colors duration-75 ${
+                  model === 'deepseek/deepseek-r1:free'
+                    ? 'bg-white dark:bg-zinc-950'
+                    : 'transparent'
+                } h-[70px] w-[174px] rounded-lg text-base font-semibold text-zinc-950 dark:text-white`}
+                onClick={() => setModel('deepseek/deepseek-r1:free')}
+              >
+                DeepSeek R1
+              </div>
+              <div
+                className={`flex cursor-pointer items-center justify-center py-2 transition-colors duration-75 ${
+                  model === 'deepseek/deepseek-r1-0528-qwen3-8b'
+                    ? 'bg-white dark:bg-zinc-950'
+                    : 'transparent'
+                } h-[70px] w-[174px] rounded-lg text-base font-semibold text-zinc-950 dark:text-white`}
+                onClick={() => setModel('deepseek/deepseek-r1-0528-qwen3-8b')}
+              >
+                DeepSeek R1 Qwen
+              </div>
+              <div
+                className={`flex cursor-pointer items-center justify-center py-2 transition-colors duration-75 ${
+                  model === 'google/gemma-3-27b-it:free'
+                    ? 'bg-white dark:bg-zinc-950'
+                    : 'transparent'
+                } h-[70px] w-[174px] rounded-lg text-base font-semibold text-zinc-950 dark:text-white`}
+                onClick={() => setModel('google/gemma-3-27b-it:free')}
+              >
+                Gemma 3-27B
+              </div>
+              <div
+                className={`flex cursor-pointer items-center justify-center py-2 transition-colors duration-75 ${
+                  model === 'tngtech/deepseek-r1t2-chimera:free'
+                    ? 'bg-white dark:bg-zinc-950'
+                    : 'transparent'
+                } h-[70px] w-[174px] rounded-lg text-base font-semibold text-zinc-950 dark:text-white`}
+                onClick={() => setModel('tngtech/deepseek-r1t2-chimera:free')}
+              >
+                DeepSeek R1T2
+              </div>
             </div>
 
             <Accordion type="multiple" className="w-full">

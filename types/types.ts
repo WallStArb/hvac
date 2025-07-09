@@ -8,18 +8,11 @@ export type OpenAIModel =
   | 'gpt-4o';
 
 export type OpenRouterModel =
-  | 'openai/gpt-3.5-turbo'
-  | 'openai/gpt-4'
-  | 'openai/gpt-4-turbo'
-  | 'anthropic/claude-3.5-sonnet'
-  | 'anthropic/claude-3-haiku'
-  | 'google/gemini-pro'
-  | 'meta-llama/llama-3.1-8b-instruct'
-  | 'meta-llama/llama-3.1-70b-instruct'
-  | 'mistralai/mistral-7b-instruct'
-  | 'microsoft/wizardlm-2-8x22b'
-  | 'perplexity/llama-3.1-8b-instruct'
-  | 'perplexity/llama-3.1-70b-instruct'
+  | 'qwen/qwq-32b:free'
+  | 'deepseek/deepseek-chat-v3-0324:free'
+  | 'deepseek/deepseek-r1:free'
+  | 'deepseek/deepseek-r1-0528-qwen3-8b'
+  | 'google/gemma-3-27b-it:free'
   | 'tngtech/deepseek-r1t2-chimera:free';
 
 export type AIModel = OpenAIModel | OpenRouterModel;

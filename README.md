@@ -272,13 +272,15 @@ For support and questions:
 
 ## OpenRouter Integration
 
-The dashboard now supports OpenRouter as an alternative AI provider, giving you access to multiple AI models from different providers:
+The dashboard uses OpenRouter as the AI provider, giving you access to multiple high-quality free AI models:
 
-### Available Models via OpenRouter:
-- **GPT-3.5 Turbo** (OpenAI)
-- **Claude 3.5 Sonnet** (Anthropic)
-- **Gemini Pro** (Google)
-- **DeepSeek R1T2 Chimera** (TNGTech) - Free model with excellent performance
+### Available Models:
+- **QWQ-32B** (Qwen) - `qwen/qwq-32b:free`
+- **DeepSeek Chat** (DeepSeek) - `deepseek/deepseek-chat-v3-0324:free`
+- **DeepSeek R1** (DeepSeek) - `deepseek/deepseek-r1:free`
+- **DeepSeek R1 Qwen** (DeepSeek) - `deepseek/deepseek-r1-0528-qwen3-8b`
+- **Gemma 3-27B** (Google) - `google/gemma-3-27b-it:free`
+- **DeepSeek R1T2 Chimera** (TNGTech) - `tngtech/deepseek-r1t2-chimera:free`
 
 ### Setup:
 1. Get your OpenRouter API key from [OpenRouter](https://openrouter.ai/)
@@ -286,5 +288,5 @@ The dashboard now supports OpenRouter as an alternative AI provider, giving you 
    ```
    OPENROUTER_API_KEY=your_openrouter_api_key_here
    ```
-3. Select "OpenRouter" as your provider in the AI chat interface
-4. Choose from the available models including the free DeepSeek R1T2 Chimera model 
+3. Select your preferred model from the available options in the AI chat interface
+4. All models are free to use with your OpenRouter account 
