@@ -19,6 +19,9 @@ const relevantEvents = new Set([
 ]);
 
 export async function POST(req: Request) {
+  if (!process.env.STRIPE_API_KEY) {
+    return new Response('Stripe not configured', { status: 501 });
+  }
   const body = await req.text();
   const headersList = await headers();
   const sig = headersList.get('Stripe-Signature') as string;
@@ -79,4 +82,14 @@ export async function POST(req: Request) {
     }
   }
   return new Response(JSON.stringify({ received: true }));
+}
+
+export async function GET(req: Request) {
+  if (!process.env.STRIPE_API_KEY) {
+    return new Response('Stripe not configured', { status: 501 });
+  }
+  // Optionally, export GET or other handlers as needed
+  // Prevent further execution
+  // @ts-ignore
+  return;
 }
