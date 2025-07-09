@@ -145,15 +145,15 @@ export default function Services() {
                       <div className="flex justify-center gap-4 mb-4">
                         <div className="flex flex-col items-center">
                           <Snowflake className="w-6 h-6 text-blue-500 mb-1" />
-                          <span className="text-xs font-semibold">AC</span>
+                          <span className="text-xs font-semibold text-gray-700">AC</span>
                         </div>
                         <div className="flex flex-col items-center">
                           <Flame className="w-6 h-6 text-orange-500 mb-1" />
-                          <span className="text-xs font-semibold">Furnace</span>
+                          <span className="text-xs font-semibold text-gray-700">Furnace</span>
                         </div>
                         <div className="flex flex-col items-center">
                           <Star className="w-6 h-6 text-purple-500 mb-1" />
-                          <span className="text-xs font-semibold">Both</span>
+                          <span className="text-xs font-semibold text-gray-700">Both</span>
                         </div>
                       </div>
                     )}
