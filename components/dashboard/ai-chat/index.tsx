@@ -223,6 +223,16 @@ export default function Chat(props: Props) {
                   >
                     Gemini Pro
                   </div>
+                  <div
+                    className={`flex cursor-pointer items-center justify-center py-2 transition-colors duration-75 ${
+                      model === 'tngtech/deepseek-r1t2-chimera:free'
+                        ? 'bg-white dark:bg-zinc-950'
+                        : 'transparent'
+                    } h-[70px] w-[174px] rounded-lg text-base font-semibold text-zinc-950 dark:text-white`}
+                    onClick={() => setModel('tngtech/deepseek-r1t2-chimera:free')}
+                  >
+                    DeepSeek R1T2
+                  </div>
                 </>
               )}
             </div>

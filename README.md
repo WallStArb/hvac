@@ -269,3 +269,22 @@ For support and questions:
 ---
 
 **Built with ❤️ for the HVAC industry** 
+
+## OpenRouter Integration
+
+The dashboard now supports OpenRouter as an alternative AI provider, giving you access to multiple AI models from different providers:
+
+### Available Models via OpenRouter:
+- **GPT-3.5 Turbo** (OpenAI)
+- **Claude 3.5 Sonnet** (Anthropic)
+- **Gemini Pro** (Google)
+- **DeepSeek R1T2 Chimera** (TNGTech) - Free model with excellent performance
+
+### Setup:
+1. Get your OpenRouter API key from [OpenRouter](https://openrouter.ai/)
+2. Add to your `.env.local`:
+   ```
+   OPENROUTER_API_KEY=your_openrouter_api_key_here
+   ```
+3. Select "OpenRouter" as your provider in the AI chat interface
+4. Choose from the available models including the free DeepSeek R1T2 Chimera model 

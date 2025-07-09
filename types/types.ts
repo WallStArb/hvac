@@ -19,7 +19,8 @@ export type OpenRouterModel =
   | 'mistralai/mistral-7b-instruct'
   | 'microsoft/wizardlm-2-8x22b'
   | 'perplexity/llama-3.1-8b-instruct'
-  | 'perplexity/llama-3.1-70b-instruct';
+  | 'perplexity/llama-3.1-70b-instruct'
+  | 'tngtech/deepseek-r1t2-chimera:free';
 
 export type AIModel = OpenAIModel | OpenRouterModel;
 
