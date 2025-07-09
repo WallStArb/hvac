@@ -1,0 +1,3 @@
+# .cursorignore
+# Do NOT ignore .env or .env.local so AI can help manage them
+# (remove any lines that would ignore these files) 

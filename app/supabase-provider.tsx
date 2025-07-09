@@ -1,6 +1,6 @@
 'use client';
 
-import type { Database } from '@/types/types_db';
+import type { Database } from '@/types/supabase';
 import { createBrowserClient } from '@supabase/ssr';
 import type { SupabaseClient } from '@supabase/supabase-js';
 import { useRouter } from 'next/navigation';
